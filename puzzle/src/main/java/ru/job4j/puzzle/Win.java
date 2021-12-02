@@ -6,17 +6,16 @@ public class Win {
         for (int i = 0; i < board.length; i++) {
             if (board[i][i] == 1 && (checkRow(board, i) || checkVert(board, i))) {
                 rsl = true;
+                break;
             }
         }
         return rsl;
     }
 
     public static boolean checkRow(int[][] board, int i) {
-        boolean rsl = false;
+        boolean rsl = true;
         for (int j = 0; j < board.length; j++) {
-            if (board[i][j] == 1) {
-                rsl = true;
-            } else {
+            if (board[i][j] != 1) {
                 rsl = false;
                 break;
             }
@@ -25,14 +24,13 @@ public class Win {
     }
 
     public static boolean checkVert(int[][] board, int i) {
-        boolean rsl = false;
+        boolean rsl = true;
         for (int j = 0; j < board.length; j++) {
-            if (board[j][i] == 1) {
-                rsl = true;
-            } else {
+            if (board[j][i] != 1) {
+                rsl = false;
                 break;
             }
-                   }
+        }
         return rsl;
     }
 }
