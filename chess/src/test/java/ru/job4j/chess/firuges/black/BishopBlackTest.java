@@ -19,7 +19,7 @@ public class BishopBlackTest {
 
     @Test
     public void testCopy() {
-        BishopBlack bishopBlack = new BishopBlack(Cell.A1) ;
+        BishopBlack bishopBlack = new BishopBlack(Cell.A1);
         Figure expected = bishopBlack.copy(Cell.A1);
         Assert.assertEquals(expected.position(), bishopBlack.position());
     }
@@ -33,7 +33,7 @@ public class BishopBlackTest {
 
     @Test(expected = Exception.class)
     public void testWayIsNotDiagonal() {
-        BishopBlack bishopBlack = new BishopBlack(Cell.C1) ;
+        BishopBlack bishopBlack = new BishopBlack(Cell.C1);
         bishopBlack.way(Cell.C2);
     }
 }
