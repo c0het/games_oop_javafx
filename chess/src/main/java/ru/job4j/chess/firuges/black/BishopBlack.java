@@ -25,7 +25,7 @@ public class BishopBlack implements Figure {
         int size = Math.abs(position.getX() - dest.getX());
         Cell[] steps = new Cell[size];
         int deltaX = position.getX() > dest.getX() ? -1 : 1;
-        int deltaY = position.getY() > dest.getY() ? -1 : 1;
+        int deltaY = position.getY() > dest.getY() ? -1 : 1 ;
         int x = position.getX();
         int y = position.getY();
         for (int i = 0; i < size; i++)  {
